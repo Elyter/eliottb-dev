@@ -2,6 +2,16 @@ import React from 'react';
 import Timeline from './Timeline';
 import { Metadata } from 'next'
 
+interface TimelineItem {
+  titre: string;
+  description: string;
+  periode: {
+    debut: number;
+    fin?: number;
+  };
+  type: 'scolaire' | 'professionnel';
+}
+
 export const metadata: Metadata = {
   title: 'À Propos | Eliott Bregere',
   description: 'Mon parcours professionnel et académique en développement web et mobile. Étudiant en Master Informatique à Ynov Bordeaux.',
@@ -12,7 +22,7 @@ export const metadata: Metadata = {
   }
 }
 
-const experiences = [
+const experiences: TimelineItem[] = [
   {
     titre: "Master Informatique - Ynov Bordeaux",
     description: "Formation en cours - Alternance 1 semaine école / 2 semaines entreprise",
@@ -20,7 +30,7 @@ const experiences = [
       debut: 2022,
       fin: 2027
     },
-    type: 'scolaire'
+    type: "scolaire" as const
   },
   {
     titre: "Alternant automatisation de test en python - Dekra Automotive",
