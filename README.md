@@ -11,9 +11,6 @@ Mon portfolio personnel présentant mon travail de développeur web. Construit a
 - **Framework**: Next.js 14 avec App Router
 - **Language**: TypeScript
 - **Styles**: Tailwind CSS
-- **Déploiement**: Vercel
-- **Police**: Geist
-- **Mode Sombre**: Implémenté avec next-themes
 
 ## 🎯 Caractéristiques
 

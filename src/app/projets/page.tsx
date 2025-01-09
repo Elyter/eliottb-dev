@@ -15,10 +15,11 @@ interface GitHubProject {
 // Liste des repos à afficher
 const FEATURED_REPOS = [
   'Elyter/party-mix',
-  'Elyter/todo-api',
-  'Elyter/Human-capacities',
+  'Elyter/eliottb-dev',
   'Elyter/tix-CLI',
   'Elyter/tix-API',
+  'Elyter/todo-api',
+  'Elyter/Human-capacities',
   'Elyter/JSA-calendar',
   // Ajoutez vos autres repos ici au format 'username/repo'
 ]
