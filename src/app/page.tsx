@@ -1,6 +1,7 @@
 import ContactButton from '@/components/contact-button';
 import DownloadButton from '@/components/download-button';
 import TypewriterTitle from '@/components/TypewriterTitle';
+import Image from 'next/image';
 
 export default function Page() {
   return (
@@ -9,7 +10,7 @@ export default function Page() {
         
         {/* Section Photo et Réseaux */}
         <div className="flex flex-col items-center gap-8">
-          <img 
+          <Image 
             src="/profile.png" 
             alt="Photo de profil"
             className="rounded-full h-48 w-48 lg:h-56 lg:w-56 object-cover"
@@ -35,11 +36,11 @@ export default function Page() {
           
           <p className="max-w-2xl text-lg">
             Je suis développeur Full Stack spécialisé en React Native et développement backend. 
-            Passionné par la création d'applications performantes et intuitives, 
-            j'aime relever de nouveaux défis techniques.
+            Passionné par la création d&apos;applications performantes et intuitives, 
+            j&apos;aime relever de nouveaux défis techniques.
             <br /> <br />
-            En recherche d'alternance dans le cadre de ma formation en développement web et mobile à Ynov. 
-            <br />Rythme d'alternance : 2 semaines en entreprise / 1 semaine en formation.
+            En recherche d&apos;alternance dans le cadre de ma formation en développement web et mobile à Ynov. 
+            <br />Rythme d&apos;alternance : 2 semaines en entreprise / 1 semaine en formation.
           </p>
 
           <div className="flex flex-wrap gap-7 justify-center sm:justify-start">

@@ -1,7 +1,6 @@
 'use client'
 
 import { useEffect, useState } from 'react'
-import { useTheme } from 'next-themes'
 import { motion } from 'framer-motion'
 
 interface GitHubProject {
@@ -26,7 +25,6 @@ const FEATURED_REPOS = [
 
 export default function ProjectsPage() {
   const [projects, setProjects] = useState<GitHubProject[]>([])
-  const { theme } = useTheme()
 
   useEffect(() => {
     const fetchProjects = async () => {
