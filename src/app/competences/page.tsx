@@ -18,7 +18,7 @@ const skills = [
   { subject: 'Next.js', level: 70 },
 ];
 
-export default function CompetencesPage() {
+function SkillsChart() {
   const { theme } = useTheme();
 
   const tooltipStyle = {
@@ -57,4 +57,9 @@ export default function CompetencesPage() {
       </p>
     </div>
   );
+}
+
+// Page component devient server component par défaut
+export default function CompetencesPage() {
+  return <SkillsChart />
 }

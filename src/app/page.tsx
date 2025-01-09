@@ -2,6 +2,17 @@ import ContactButton from '@/components/contact-button';
 import DownloadButton from '@/components/download-button';
 import TypewriterTitle from '@/components/TypewriterTitle';
 import Image from 'next/image';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Eliott Bregere',
+  description: 'Développeur Full Stack spécialisé en React Native et développement backend. En recherche d\'alternance pour ma formation en développement web et mobile à Ynov.',
+  keywords: ['développeur', 'alternance', 'react native', 'backend', 'ynov'],
+  openGraph: {
+    title: 'Eliott Bregere',
+    description: 'Développeur Full Stack spécialisé en React Native et développement backend. En recherche d\'alternance pour ma formation en développement web et mobile à Ynov.'
+  }
+}
 
 export default function Page() {
   return (
@@ -14,13 +25,15 @@ export default function Page() {
             src="/profile.png" 
             alt="Photo de profil"
             className="rounded-full h-48 w-48 lg:h-56 lg:w-56 object-cover"
+            width={224}
+            height={224}
           />
           <div className="flex gap-6">
             <a href="https://linkedin.com/in/eliottbreg" className="p-2 hover:bg-[#f2f2f2] rounded">
-              <img src="/linkedin.svg" alt="LinkedIn" className="h-10 w-10" />
+              <Image src="/linkedin.svg" alt="LinkedIn" className="h-10 w-10" height={40} width={40} />
             </a>
             <a href="https://github.com/Elyter" className="p-2 hover:bg-[#f2f2f2] rounded">
-              <img src="/github.svg" alt="GitHub" className="h-10 w-10" />
+              <Image src="/github.svg" alt="GitHub" className="h-10 w-10" height={40} width={40}/>
             </a>
           </div>
         </div>

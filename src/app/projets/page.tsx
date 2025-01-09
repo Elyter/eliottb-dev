@@ -1,7 +1,7 @@
 'use client'
-
 import { useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
+
 
 interface GitHubProject {
   id: number
@@ -23,7 +23,7 @@ const FEATURED_REPOS = [
   // Ajoutez vos autres repos ici au format 'username/repo'
 ]
 
-export default function ProjectsPage() {
+function ProjectsList() {
   const [projects, setProjects] = useState<GitHubProject[]>([])
 
   useEffect(() => {
@@ -91,4 +91,9 @@ export default function ProjectsPage() {
       </div>
     </div>
   )
-} 
+}
+
+// Page component devient server component par défaut
+export default function ProjectsPage() {
+  return <ProjectsList />
+}
