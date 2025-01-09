@@ -45,7 +45,7 @@ export default function Timeline({ items }: TimelineProps) {
                           left-[-35px] md:left-auto
                           ${index % 2 === 0 ? 
                             'md:-right-[-5px] md:translate-x-1/2' : 
-                            'md:-left-[-5px] md:-translate-x-1/2'}`} />
+                            'md:-left-[5px] md:-translate-x-1/2'}`} />
             
             {/* Contenu */}
             <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md transform transition-transform duration-300 hover:scale-105">
