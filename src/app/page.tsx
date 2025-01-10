@@ -58,7 +58,7 @@ export default function Page() {
 
           <div className="flex flex-wrap gap-7 justify-center sm:justify-start">
             <div className="w-40">
-              <DownloadButton href="/cv.pdf" />
+              <DownloadButton href="/Cv_eliott_bregere.pdf" />
             </div>
             <div className="w-40">
               <ContactButton href="mailto:eliottbreg@gmail.com" />
