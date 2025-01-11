@@ -6,11 +6,11 @@ import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Eliott Bregere',
-  description: 'Développeur Full Stack spécialisé en React Native et développement backend. En recherche d\'alternance pour ma formation en développement web et mobile à Ynov.',
-  keywords: ['développeur', 'alternance', 'react native', 'backend', 'ynov'],
+  description: 'Développeur Full Stack spécialisé en React Native, Next.js et développement backend. En recherche d\'alternance pour ma formation en développement web et mobile à Ynov.',
+  keywords: ['développeur', 'alternance', 'react native', 'Next.js', 'backend', 'ynov'],
   openGraph: {
     title: 'Eliott Bregere',
-    description: 'Développeur Full Stack spécialisé en React Native et développement backend. En recherche d\'alternance pour ma formation en développement web et mobile à Ynov.'
+    description: 'Développeur Full Stack spécialisé en React Native, Next.js et développement backend. En recherche d\'alternance pour ma formation en développement web et mobile à Ynov.'
   }
 }
 
