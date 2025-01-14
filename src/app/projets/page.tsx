@@ -2,7 +2,6 @@
 import { useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
 
-
 interface GitHubProject {
   id: number
   name: string
@@ -12,26 +11,46 @@ interface GitHubProject {
   stargazers_count: number
 }
 
-// Liste des repos à afficher
-const FEATURED_REPOS = [
-  'Elyter/party-mix',
-  'Elyter/eliottb-dev',
-  'Elyter/tix-CLI',
-  'Elyter/tix-API',
-  'Elyter/todo-api',
-  'Elyter/Human-capacities',
-  'Elyter/JSA-calendar',
-  // Ajoutez vos autres repos ici au format 'username/repo'
+interface ProjectInfo {
+  repo: string;
+  liveUrl?: string;
+  platform?: string;
+  androidUrl?: string;
+  iosUrl?: string;
+}
+
+// Liste réorganisée avec les projets en ligne en premier
+const FEATURED_REPOS: ProjectInfo[] = [
+  {
+    repo: 'Elyter/party-mix',
+    platform: 'Android & iOS',
+    androidUrl: 'https://play.google.com/store/apps/details?id=com.eliottdev.partymix',
+    iosUrl: 'https://apps.apple.com/fr/app/party-mix/id6695729598'
+  },
+  {
+    repo: 'Elyter/Human-capacities',
+    liveUrl: 'https://human-capacities.vercel.app'
+  },
+  {
+    repo: 'Elyter/eliottb-dev',
+    liveUrl: 'https://eliottb.dev'
+  },
+  { repo: 'Elyter/tix-CLI' },
+  { repo: 'Elyter/tix-API' },
+  { repo: 'Elyter/todo-api' },
+  { repo: 'Elyter/JSA-calendar' },
 ]
 
 function ProjectsList() {
-  const [projects, setProjects] = useState<GitHubProject[]>([])
+  const [projects, setProjects] = useState<(GitHubProject & ProjectInfo)[]>([])
 
   useEffect(() => {
     const fetchProjects = async () => {
-      const projectPromises = FEATURED_REPOS.map(repo => 
-        fetch(`https://api.github.com/repos/${repo}`).then(res => res.json())
-      )
+      const projectPromises = FEATURED_REPOS.map(async (projectInfo) => {
+        const response = await fetch(`https://api.github.com/repos/${projectInfo.repo}`)
+        const data = await response.json()
+        return { ...data, ...projectInfo }
+      })
       
       const projectsData = await Promise.all(projectPromises)
       setProjects(projectsData)
@@ -59,9 +78,16 @@ function ProjectsList() {
                     group mx-auto"
           >
             <div className="h-full flex flex-col justify-center gap-2">
-              <h2 className="text-2xl font-bold dark:text-white">
-                {project.name}
-              </h2>
+              <div className="flex items-center justify-between">
+                <h2 className="text-2xl font-bold dark:text-white">
+                  {project.name}
+                </h2>
+                {(project.liveUrl || project.platform) && (
+                  <span className="text-xs px-2 py-1 bg-green-500 text-white rounded-full">
+                    {project.platform || 'Live'}
+                  </span>
+                )}
+              </div>
               <p className="text-gray-600 dark:text-gray-300">
                 {project.description || "Aucune description disponible"}
               </p>
@@ -76,17 +102,71 @@ function ProjectsList() {
               </div>
             </div>
 
-            <a
-              href={project.html_url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="absolute left-1/2 bottom-0 -translate-x-1/2 translate-y-[125%]
-                       w-[60%] rounded-2xl bg-[#008bf8] text-white text-center py-2 px-4
-                       opacity-0 transition-all duration-300 cursor-pointer
-                       group-hover:translate-y-[50%] group-hover:opacity-100"
-            >
-              Voir sur GitHub
-            </a>
+            {project.androidUrl && project.iosUrl ? (
+              <div className="absolute left-1/2 bottom-0 -translate-x-1/2 translate-y-[125%]
+                            w-[90%] flex justify-between gap-2
+                            opacity-0 transition-all duration-300
+                            group-hover:translate-y-[50%] group-hover:opacity-100">
+                <a
+                  href={project.androidUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex-1 rounded-2xl bg-[#008bf8] text-white text-center py-2 px-2 text-sm"
+                >
+                  Google Play
+                </a>
+                <a
+                  href={project.iosUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex-1 rounded-2xl bg-[#008bf8] text-white text-center py-2 px-2 text-sm"
+                >
+                  App Store
+                </a>
+                <a
+                  href={project.html_url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex-1 rounded-2xl bg-[#333] text-white text-center py-2 px-2 text-sm"
+                >
+                  GitHub
+                </a>
+              </div>
+            ) : project.liveUrl ? (
+              <div className="absolute left-1/2 bottom-0 -translate-x-1/2 translate-y-[125%]
+                            w-[80%] flex justify-between gap-2
+                            opacity-0 transition-all duration-300
+                            group-hover:translate-y-[50%] group-hover:opacity-100">
+                <a
+                  href={project.liveUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex-1 rounded-2xl bg-[#008bf8] text-white text-center py-2 px-4"
+                >
+                  Voir le site
+                </a>
+                <a
+                  href={project.html_url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex-1 rounded-2xl bg-[#333] text-white text-center py-2 px-4"
+                >
+                  GitHub
+                </a>
+              </div>
+            ) : (
+              <a
+                href={project.html_url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="absolute left-1/2 bottom-0 -translate-x-1/2 translate-y-[125%]
+                         w-[60%] rounded-2xl bg-[#333] text-white text-center py-2 px-4
+                         opacity-0 transition-all duration-300 cursor-pointer
+                         group-hover:translate-y-[50%] group-hover:opacity-100"
+              >
+                GitHub
+              </a>
+            )}
           </motion.div>
         ))}
       </div>
