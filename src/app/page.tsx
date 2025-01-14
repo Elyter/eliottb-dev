@@ -6,11 +6,11 @@ import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Eliott Bregere',
-  description: 'Développeur Full Stack spécialisé en React Native, Next.js et développement backend. En recherche d\'alternance pour ma formation en développement web et mobile à Ynov.',
-  keywords: ['développeur', 'alternance', 'react native', 'Next.js', 'backend', 'ynov'],
+  description: 'Étudiant développeur web passionné maîtrisant JavaScript, TypeScript, React.js, Next.js et plus. En recherche d\'alternance avec un rythme d\'une semaine école / deux semaines entreprise.',
+  keywords: ['développeur', 'alternance', 'JavaScript', 'TypeScript', 'React.js', 'Next.js', 'Node.js', 'Python'],
   openGraph: {
     title: 'Eliott Bregere',
-    description: 'Développeur Full Stack spécialisé en React Native, Next.js et développement backend. En recherche d\'alternance pour ma formation en développement web et mobile à Ynov.'
+    description: 'Étudiant développeur web passionné maîtrisant JavaScript, TypeScript, React.js, Next.js et plus. En recherche d\'alternance avec un rythme d\'une semaine école / deux semaines entreprise.'
   }
 }
 
@@ -48,12 +48,15 @@ export default function Page() {
           </div>
           
           <p className="max-w-2xl text-lg">
-            Je suis développeur Full Stack spécialisé en React Native et développement backend. 
-            Passionné par la création d&apos;applications performantes et intuitives, 
-            j&apos;aime relever de nouveaux défis techniques.
+            Étudiant passionné de développement web, je maîtrise JavaScript, TypeScript, Python, 
+            React.js, Next.js, Node.js, Firebase, SQL, Tailwind CSS et Git.
             <br /> <br />
-            En recherche d&apos;alternance dans le cadre de ma formation en développement web et mobile à Ynov. 
-            <br />Rythme d&apos;alternance : 2 semaines en entreprise / 1 semaine en formation.
+            Curieux, organisé et adaptable, je sais travailler en équipe tout en restant autonome. 
+            Doté d&apos;un bon esprit d&apos;analyse et d&apos;une forte capacité d&apos;apprentissage, 
+            je suis motivé à relever des défis techniques et à apporter des solutions créatives.
+            <br /> <br />
+            En recherche d&apos;alternance avec un rythme d&apos;une semaine école / deux semaines entreprise 
+            pour contribuer à des projets innovants tout en développant mes compétences.
           </p>
 
           <div className="flex flex-wrap gap-7 justify-center sm:justify-start">
