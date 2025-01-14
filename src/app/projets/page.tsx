@@ -35,6 +35,7 @@ const FEATURED_REPOS: ProjectInfo[] = [
     repo: 'Elyter/eliottb-dev',
     liveUrl: 'https://eliottb.dev'
   },
+  { repo: 'Elyter/API-Monitoring'},
   { repo: 'Elyter/tix-CLI' },
   { repo: 'Elyter/tix-API' },
   { repo: 'Elyter/todo-api' },
