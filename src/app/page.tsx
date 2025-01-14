@@ -5,12 +5,16 @@ import Image from 'next/image';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Eliott Bregere',
-  description: 'Étudiant développeur web passionné maîtrisant JavaScript, TypeScript, React.js, Next.js et plus. En recherche d\'alternance avec un rythme d\'une semaine école / deux semaines entreprise.',
-  keywords: ['développeur', 'alternance', 'JavaScript', 'TypeScript', 'React.js', 'Next.js', 'Node.js', 'Python'],
+  title: 'Eliott Bregere | Développeur Web et Mobile Fullstack',
+  description: 'Étudiant développeur web et mobile passionné maîtrisant JavaScript, TypeScript, React Native, Next.js, Python, SQL, Git. En recherche d\'alternance.',
+  keywords: ['développeur', 'alternance', 'JavaScript', 'TypeScript', 'React Native', 'Next.js', 'Node.js', 'Python'],
   openGraph: {
-    title: 'Eliott Bregere',
-    description: 'Étudiant développeur web passionné maîtrisant JavaScript, TypeScript, React.js, Next.js et plus. En recherche d\'alternance avec un rythme d\'une semaine école / deux semaines entreprise.'
+    title: 'Eliott Bregere | Développeur Web et Mobile Fullstack',
+    description: 'Étudiant développeur web et mobile passionné maîtrisant JavaScript, TypeScript, React Native, Next.js, Python, SQL, Git. En recherche d\'alternance.'
+  },
+  metadataBase: new URL('https://eliottb.dev'),
+  alternates: {
+    canonical: '/'
   }
 }
 
