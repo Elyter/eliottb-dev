@@ -1,7 +1,7 @@
 # eliottb.dev - Portfolio Personnel
 
 [![Live Site](https://img.shields.io/badge/live-eliottb.dev-blue)](https://eliottb.dev)
-[![Next.js](https://img.shields.io/badge/Next.js-14-black)](https://nextjs.org/)
+[![Next.js](https://img.shields.io/badge/Next.js-15-black)](https://nextjs.org/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-blue)](https://www.typescriptlang.org/)
 
 Mon portfolio personnel présentant mon travail de développeur web. Construit avec Next.js 14 et hébergé sur Vercel.
