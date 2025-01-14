@@ -49,7 +49,7 @@ export default function Page() {
           
           <p className="max-w-2xl text-lg">
             Étudiant passionné de développement web, je maîtrise JavaScript, TypeScript, Python, 
-            React.js, Next.js, Node.js, Firebase, SQL, Tailwind CSS et Git.
+            React Native, Next.js, Node.js, Firebase, SQL, Tailwind CSS et Git.
             <br /> <br />
             Curieux, organisé et adaptable, je sais travailler en équipe tout en restant autonome. 
             Doté d&apos;un bon esprit d&apos;analyse et d&apos;une forte capacité d&apos;apprentissage, 
