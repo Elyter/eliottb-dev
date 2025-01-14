@@ -8,7 +8,7 @@ Mon portfolio personnel présentant mon travail de développeur web. Construit a
 
 ## 🚀 Technologies Utilisées
 
-- **Framework**: Next.js 14 avec App Router
+- **Framework**: Next.js 15 avec App Router
 - **Language**: TypeScript
 - **Styles**: Tailwind CSS
 
