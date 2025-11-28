@@ -38,9 +38,10 @@ const Header = () => {
           {/* Navigation */}
           <div className={`lg:flex items-center gap-8 ${isMenuOpen ? 'absolute top-full left-0 right-0 flex flex-col bg-background border-b border-gray-200 dark:border-gray-800 py-4' : 'hidden'}`}>
             <ul className={`flex items-center gap-8 ${isMenuOpen ? 'flex-col' : ''}`}>
+              <li><Link href="/services" className="hover:text-gray-600 transition-colors">Services</Link></li>
               <li><Link href="/competences" className="hover:text-gray-600 transition-colors">Compétences</Link></li>
-              <li><Link href="/a-propos" className="hover:text-gray-600 transition-colors">À propos</Link></li>
               <li><Link href="/projets" className="hover:text-gray-600 transition-colors">Projets</Link></li>
+              <li><Link href="/a-propos" className="hover:text-gray-600 transition-colors">À propos</Link></li>
               <li><a href="mailto:eliottbreg@gmail.com" className="hover:text-gray-600 transition-colors">Contact</a></li>
             </ul>
             <ThemeToggle />

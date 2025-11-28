@@ -13,10 +13,11 @@ export default function TypewriterTitle() {
   return mounted ? (
     <Typewriter
       options={{
-        strings: ['Développeur Full Stack',
-            "Développeur React Native",
-            "Développeur Backend",
-            "Développeur Next.js",
+        strings: ['Développeur Freelance Full Stack',
+            "Création d'Applications Mobile",
+            "Développement d'APIs Backend",
+            "Solutions Web avec Next.js",
+            "Consultant Technique",
         ],
         autoStart: true,
         loop: true,

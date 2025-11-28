@@ -13,19 +13,27 @@ interface TimelineItem {
 }
 
 export const metadata: Metadata = {
-  title: 'À Propos | Eliott Bregere',
-  description: 'Mon parcours professionnel et académique en développement web et mobile. Étudiant en Master Informatique à Ynov Bordeaux.',
-  keywords: ['à propos', 'parcours', 'formation', 'expérience', 'développeur'],
+  title: 'À Propos | Eliott Bregere - Développeur Freelance',
+  description: 'Découvrez mon parcours professionnel et mes expériences en développement web et mobile. Compétences en JavaScript, TypeScript, React Native et Next.js.',
+  keywords: ['à propos', 'parcours', 'expérience', 'développeur freelance', 'portfolio'],
   openGraph: {
-    title: 'À Propos | Eliott Bregere',
-    description: 'Découvrez mon parcours professionnel et académique'
+    title: 'À Propos | Eliott Bregere - Développeur Freelance',
+    description: 'Découvrez mon parcours professionnel et mes expériences'
   }
 }
 
 const experiences: TimelineItem[] = [
   {
+    titre: "Développeur Freelance",
+    description: "Création d'applications web et mobile sur mesure. Développement d'APIs, MVP et solutions techniques pour divers clients. Stack: React Native, Next.js, Node.js, TypeScript.",
+    periode: {
+      debut: 2024
+    },
+    type: "professionnel" as const
+  },
+  {
     titre: "Master Informatique - Ynov Bordeaux",
-    description: "Formation en cours - Alternance 1 semaine école / 2 semaines entreprise",
+    description: "Spécialisation en développement web et mobile. Maîtrise des technologies modernes et des méthodologies agiles.",
     periode: {
       debut: 2022,
       fin: 2027
@@ -33,8 +41,8 @@ const experiences: TimelineItem[] = [
     type: "scolaire" as const
   },
   {
-    titre: "Alternant automatisation de test en python - Dekra Automotive",
-    description: "Création de scripts d'automatisation de tests en Python pour l'exécution de scénarios sur navigateur. Fin anticipée de la période d'essai, le poste ne répondant pas à mes attentes professionnelles.",
+    titre: "Développeur Python - Dekra Automotive",
+    description: "Développement de scripts d'automatisation de tests pour applications web. Utilisation de Python, Selenium et frameworks de testing.",
     periode: {
       debut: 2024,
       fin: 2024
@@ -42,20 +50,18 @@ const experiences: TimelineItem[] = [
     type: 'professionnel'
   },
   {
-    titre: "Formation Marketing Digital",
-    description: "StaffMe Academy - Formation intensive sur le marketing digital",
+    titre: "Projets Personnels & Open Source",
+    description: "Développement d'applications mobiles publiées (Party Mix sur iOS/Android), APIs REST, outils CLI et sites web. Contribution active à des projets open source.",
     periode: {
-      debut: 2023,
-      fin: 2023
+      debut: 2022
     },
-    type: 'scolaire'
+    type: 'professionnel'
   },
   {
-    titre: "Démarcheur - Voltalis",
-    description: "Développement de compétences en communication persuasive et gestion relation client",
+    titre: "Auto-Entrepreneur",
+    description: "Premières expériences entrepreneuriales et développement de compétences en gestion de projet et relation client.",
     periode: {
-      debut: 2023,
-      fin: 2023
+      debut: 2022
     },
     type: 'professionnel'
   },
@@ -67,14 +73,6 @@ const experiences: TimelineItem[] = [
       fin: 2022
     },
     type: 'scolaire'
-  },
-  {
-    titre: "Auto-Entrepreneur",
-    description: "Missions diverses : Hôte de caisse, Flyering, Vente événementielle, Livraison, Game Master, Acteur",
-    periode: {
-      debut: 2022
-    },
-    type: 'professionnel'
   }
 ];
 
@@ -82,7 +80,7 @@ export default function AboutPage() {
   return (
     <div className="relative container mx-auto p-8">
       <h1 className="text-4xl font-bold mb-12 text-center dark:text-white">
-        Mon Parcours
+        Mon Parcours Professionnel
       </h1>
       <Timeline items={experiences} />
     </div>

@@ -1,16 +1,15 @@
 import ContactButton from '@/components/contact-button';
-import DownloadButton from '@/components/download-button';
 import TypewriterTitle from '@/components/TypewriterTitle';
 import Image from 'next/image';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Eliott Bregere | Développeur Web et Mobile Fullstack',
-  description: 'Étudiant développeur web et mobile passionné maîtrisant JavaScript, TypeScript, React Native, Next.js, Python, SQL, Git. En recherche d\'alternance.',
-  keywords: ['développeur', 'alternance', 'JavaScript', 'TypeScript', 'React Native', 'Next.js', 'Node.js', 'Python'],
+  title: 'Eliott Bregere | Développeur Freelance Web & Mobile Fullstack',
+  description: 'Développeur freelance spécialisé en développement web et mobile. Solutions sur mesure en JavaScript, TypeScript, React Native, Next.js, Node.js. Disponible pour vos projets.',
+  keywords: ['développeur freelance', 'développeur web', 'développeur mobile', 'JavaScript', 'TypeScript', 'React Native', 'Next.js', 'Node.js', 'Python', 'freelance développement', 'prestation développement'],
   openGraph: {
-    title: 'Eliott Bregere | Développeur Web et Mobile Fullstack',
-    description: 'Étudiant développeur web et mobile passionné maîtrisant JavaScript, TypeScript, React Native, Next.js, Python, SQL, Git. En recherche d\'alternance.'
+    title: 'Eliott Bregere | Développeur Freelance Web & Mobile Fullstack',
+    description: 'Développeur freelance spécialisé en développement web et mobile. Solutions sur mesure pour vos projets digitaux.'
   },
   metadataBase: new URL('https://eliottb.dev'),
   alternates: {
@@ -52,23 +51,32 @@ export default function Page() {
           </div>
           
           <p className="max-w-2xl text-lg">
-            Étudiant passionné de développement web, je maîtrise JavaScript, TypeScript, Python, 
-            React Native, Next.js, Node.js, Firebase, SQL, Tailwind CSS et Git.
+            <strong>Développeur freelance</strong> spécialisé dans la création d&apos;applications web et mobile sur mesure. 
+            J&apos;accompagne entreprises et entrepreneurs dans la concrétisation de leurs projets digitaux.
             <br /> <br />
-            Curieux, organisé et adaptable, je sais travailler en équipe tout en restant autonome. 
-            Doté d&apos;un bon esprit d&apos;analyse et d&apos;une forte capacité d&apos;apprentissage, 
-            je suis motivé à relever des défis techniques et à apporter des solutions créatives.
+            <strong>Mon expertise :</strong> JavaScript, TypeScript, React Native, Next.js, Node.js, Firebase (expert), Python, SQL, Tailwind CSS.
+            Je transforme vos idées en solutions techniques performantes et évolutives.
             <br /> <br />
-            En recherche d&apos;alternance avec un rythme d&apos;une semaine école / deux semaines entreprise 
-            pour contribuer à des projets innovants tout en développant mes compétences.
+            <strong>Pourquoi me choisir ?</strong> Réactivité, qualité du code, respect des délais et communication transparente. 
+            Je m&apos;adapte à vos besoins et vous livre des produits testés et documentés.
           </p>
+          
+          <div className="bg-blue-50 dark:bg-blue-900/20 border-l-4 border-blue-500 p-4 rounded">
+            <p className="font-semibold text-blue-900 dark:text-blue-100">💼 Disponible pour vos projets</p>
+            <p className="text-sm text-blue-800 dark:text-blue-200 mt-1">Applications web • Applications mobile • APIs • MVP • Maintenance</p>
+          </div>
 
           <div className="flex flex-wrap gap-7 justify-center sm:justify-start">
-            <div className="w-40">
-              <DownloadButton href="/Cv_eliott_bregere.pdf" />
-            </div>
-            <div className="w-40">
+            <div className="w-48">
               <ContactButton href="mailto:eliottbreg@gmail.com" />
+            </div>
+            <div className="w-48">
+              <a 
+                href="/services" 
+                className="inline-block w-full text-center px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg transition-colors"
+              >
+                Mes Services
+              </a>
             </div>
           </div>
         </div>

@@ -4,16 +4,17 @@ import { RadarChart, PolarGrid, PolarAngleAxis, Radar, ResponsiveContainer, Tool
 import { useTheme } from 'next-themes';
 
 const skills = [
-  { subject: 'React', level: 70 },
-  { subject: 'TypeScript', level: 70 },
-  { subject: 'Node.js', level: 85 },
-  { subject: 'CSS/SCSS', level: 50 },
+  { subject: 'React', level: 80 },
+  { subject: 'TypeScript', level: 80 },
+  { subject: 'Node.js', level: 75 },
+  { subject: 'CSS/SCSS', level: 60 },
   { subject: 'tailwindcss', level: 60 },
-  { subject: 'Git', level: 75 },
-  { subject: 'Docker', level: 35 },
+  { subject: 'Git', level: 80 },
+  { subject: 'Firebase', level: 80 },
+  { subject: 'Docker', level: 65 },
   { subject: 'SQL', level: 65 },
-  { subject: 'React Native', level: 75 },
-  { subject: 'Design', level: 25 },
+  { subject: 'React Native', level: 80 },
+  { subject: 'Design', level: 50 },
   { subject: 'JavaScript', level: 80 },
   { subject: 'Next.js', level: 70 },
 ];
