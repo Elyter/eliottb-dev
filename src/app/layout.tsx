@@ -5,11 +5,11 @@ import { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'Eliott Bregere | Développeur Web et Mobile Fullstack',
-  description: 'Étudiant développeur web et mobile passionné maîtrisant JavaScript, TypeScript, React Native, Next.js, Python, SQL, Git. En recherche d\'alternance.',
-  keywords: ['développeur', 'alternance', 'JavaScript', 'TypeScript', 'React Native', 'Next.js', 'Node.js', 'Python'],
+  description: 'Étudiant développeur web et mobile passionné maîtrisant JavaScript, TypeScript, React Native, Next.js, Python, SQL, Git.',
+  keywords: ['développeur', 'JavaScript', 'TypeScript', 'React Native', 'Next.js', 'Node.js', 'Python'],
   openGraph: {
     title: 'Eliott Bregere | Développeur Web et Mobile Fullstack',
-    description: 'Étudiant développeur web et mobile passionné maîtrisant JavaScript, TypeScript, React Native, Next.js, Python, SQL, Git. En recherche d\'alternance.'
+    description: 'Étudiant développeur web et mobile passionné maîtrisant JavaScript, TypeScript, React Native, Next.js, Python, SQL, Git.'
   },
   metadataBase: new URL('https://eliottb.dev'),
   alternates: {

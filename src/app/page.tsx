@@ -4,12 +4,12 @@ import Image from 'next/image';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Eliott Bregere | Développeur Freelance Web & Mobile Fullstack',
-  description: 'Développeur freelance spécialisé en développement web et mobile. Solutions sur mesure en JavaScript, TypeScript, React Native, Next.js, Node.js. Disponible pour vos projets.',
-  keywords: ['développeur freelance', 'développeur web', 'développeur mobile', 'JavaScript', 'TypeScript', 'React Native', 'Next.js', 'Node.js', 'Python', 'freelance développement', 'prestation développement'],
+  title: 'Eliott Bregere | Développeur Web & Mobile Fullstack',
+  description: 'Développeur spécialisé en développement web et mobile. Solutions sur mesure en JavaScript, TypeScript, React Native, Next.js, Node.js.',
+  keywords: ['développeur web', 'développeur mobile', 'JavaScript', 'TypeScript', 'React Native', 'Next.js', 'Node.js', 'Python'],
   openGraph: {
-    title: 'Eliott Bregere | Développeur Freelance Web & Mobile Fullstack',
-    description: 'Développeur freelance spécialisé en développement web et mobile. Solutions sur mesure pour vos projets digitaux.'
+    title: 'Eliott Bregere | Développeur Web & Mobile Fullstack',
+    description: 'Développeur spécialisé en développement web et mobile. Solutions sur mesure pour vos projets digitaux.'
   },
   metadataBase: new URL('https://eliottb.dev'),
   alternates: {
@@ -51,32 +51,16 @@ export default function Page() {
           </div>
           
           <p className="max-w-2xl text-lg">
-            <strong>Développeur freelance</strong> spécialisé dans la création d&apos;applications web et mobile sur mesure. 
+            <strong>Développeur Fullstack</strong> spécialisé dans la création d&apos;applications web et mobile sur mesure. 
             J&apos;accompagne entreprises et entrepreneurs dans la concrétisation de leurs projets digitaux.
             <br /> <br />
             <strong>Mon expertise :</strong> JavaScript, TypeScript, React Native, Next.js, Node.js, Firebase (expert), Python, SQL, Tailwind CSS.
             Je transforme vos idées en solutions techniques performantes et évolutives.
-            <br /> <br />
-            <strong>Pourquoi me choisir ?</strong> Réactivité, qualité du code, respect des délais et communication transparente. 
-            Je m&apos;adapte à vos besoins et vous livre des produits testés et documentés.
           </p>
           
-          <div className="bg-blue-50 dark:bg-blue-900/20 border-l-4 border-blue-500 p-4 rounded">
-            <p className="font-semibold text-blue-900 dark:text-blue-100">💼 Disponible pour vos projets</p>
-            <p className="text-sm text-blue-800 dark:text-blue-200 mt-1">Applications web • Applications mobile • APIs • MVP • Maintenance</p>
-          </div>
-
           <div className="flex flex-wrap gap-7 justify-center sm:justify-start">
             <div className="w-48">
               <ContactButton href="mailto:eliottbreg@gmail.com" />
-            </div>
-            <div className="w-48">
-              <a 
-                href="/services" 
-                className="inline-block w-full text-center px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg transition-colors"
-              >
-                Mes Services
-              </a>
             </div>
           </div>
         </div>
