@@ -21,6 +21,10 @@
     "styled-components": "^6.1.13",
     "typewriter-effect": "^2.21.0"
   },
+  "overrides": {
+    "react": "$react",
+    "react-dom": "$react-dom"
+  },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
     "@types/node": "^20",
